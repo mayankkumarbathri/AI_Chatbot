@@ -1,38 +1,33 @@
-# Student Grade Tracker
+# AI Chatbot
 
-**CodeAlpha Java Programming Internship — Task 1**
+**CodeAlpha Java Programming Internship — Task 3**
 
-A console program to input and manage student grades, and to view
-per-student and class-wide summary reports.
+A rule-based FAQ chatbot with simple NLP preprocessing and keyword-match
+scoring, able to learn new answers interactively.
 
 ## Features
-- Add students by name.
-- Record one or more grades (0–100) per student.
-- View an individual report: all grades, average, highest, lowest.
-- View a class-wide summary table for every student at once.
-- Data is stored in memory (an `ArrayList` of students) for the session.
+- Preprocessing: lowercasing, punctuation stripping, stop-word removal,
+  tokenization.
+- Keyword-scoring match against a knowledge base of FAQ rules (topics:
+  greetings, hours, location, contact, pricing, services, and more).
+- Falls back to "I'm not sure I understand" when nothing scores, and offers
+  to be taught a response right there in the conversation.
+- Anything you teach it is saved to `chatbot_knowledge.txt` and reloaded on
+  the next run, so the bot's knowledge grows over time.
+- Type `help` for a list of topics, `bye`/`exit`/`quit` to end.
 
 ## Files
-- `StudentGradeTracker.java` — single-file program, no external dependencies.
+- `AIChatbot.java` — single-file program, no external dependencies.
 
 ## Compile & run
 ```bash
-javac StudentGradeTracker.java
-java StudentGradeTracker
+javac AIChatbot.java
+java AIChatbot
 ```
 Requires a JDK (17+ recommended).
 
-## Menu
-```
-1. Add Student
-2. Add Grade to Student
-3. View Individual Student Report
-4. View Class Summary Report
-5. Exit
-```
-
 ## Suggested GitHub repo name
-`CodeAlpha_StudentGradeTracker`
+`CodeAlpha_AIChatbot`
 
 ## Note
 Written and hand-checked for correct Java syntax; not compiled in the
